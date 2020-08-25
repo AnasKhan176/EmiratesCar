@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="product"
+            type="com.uae.emiratescar.ui.model.ProductList" />
+
+        <variable
+            name="productImg"
+            type="com.uae.emiratescar.ui.model.ImageDetails" />
+
+        <variable
+            name="proceedListener"
+            type="com.uae.emiratescar.ui.listeners.ClickListener" />
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:onClick="@{(v)->proceedListener.onItemclickListener()}"
+        app:cardCornerRadius="@dimen/prd_item_card_radius">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vehicle_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_main"
+                android:layout_width="180dp"
+                android:layout_height="120dp"
+                android:background="@drawable/rectangle"
+                app:cardCornerRadius="@dimen/prd_item_card_radius"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivPrdPic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    app:ImagesUrl="@{productImg.prdImg}" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/ivProceed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_main"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:onClick="@{(v)->proceedListener.onclickListener()}"
+                android:padding="@dimen/padding_5"
+                android:src="@drawable/ic_more_right_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPrdNameHint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card_main"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:padding="@dimen/padding_3"
+                android:text="@string/prd_name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/txt_size_16"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/ivProceed"
+                app:layout_constraintStart_toEndOf="@+id/card_main"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvPrdName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPrdNameHint"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:padding="@dimen/padding_3"
+                android:text="@{product.prdName}"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/txt_size_14"
+                app:layout_constraintEnd_toStartOf="@+id/ivProceed"
+                app:layout_constraintStart_toEndOf="@+id/card_main"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrdNameHint" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ly_mid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:padding="@dimen/padding_3"
+                app:layout_constraintEnd_toStartOf="@+id/ivProceed"
+                app:layout_constraintStart_toEndOf="@+id/card_main"
+                app:layout_constraintTop_toBottomOf="@+id/tvPrdName">
+
+                <TextView
+                    android:id="@+id/tvPrdColorHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prd_color"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txt_size_16"
+                    android:textStyle="bold"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPrdPriceHint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:text="@string/prd_price"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/txt_size_16"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvPrdColorHint"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ly_mid1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_10"
+                android:layout_marginEnd="@dimen/margin_10"
+                android:padding="@dimen/padding_3"
+                app:layout_constraintEnd_toStartOf="@+id/ivProceed"
+                app:layout_constraintStart_toEndOf="@+id/card_main"
+                app:layout_constraintTop_toBottomOf="@+id/ly_mid">
+
+                <TextView
+                    android:id="@+id/tvPrdColor"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:text="@{product.Color}"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/txt_size_14"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPrdPrice"
+                    android:layout_width="72dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_10"
+                    android:text="@{product.Price+ ` AED `}"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/txt_size_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/tvPrdColor"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/other_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <ImageView
+                android:id="@+id/ivProceed1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{(v)->proceedListener.onclickListener()}"
+                android:padding="@dimen/padding_3"
+                android:src="@drawable/ic_more_right_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivOther"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_20"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:layout_marginStart="@dimen/margin_5"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="@{product.PrdName}"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/txt_size_20"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+               android:text="@{ product.Price + ` AED ` }"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/txt_size_20"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivOther" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

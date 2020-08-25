@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">Emirates Car</string>
+
+    <string name="internal_err">We are facing some issue while connecting to the server. Please try again.</string>
+    <string name="network_err">We are facing some issue while connecting to the server. Please try again.</string>
+    <string name="no_data">No data found.Please try again.</string>
+    <string name="no_internet">Internet is not connected. Please try again.</string>
+
+
+    <!-- message -->
+    <string name="please_wait">Please wait</string>
+    <string name="update_msg">New Version of application is available, please update the app before you proceed further.</string>
+    <string name="download_now">Update Now</string>
+    <string name="cancel">Cancel</string>
+
+
+    <!-- Login Screen    -->
+    <string name="login_userid">Email ID</string>
+    <string name="login_pass">Password</string>
+    <string name="sign_in">SignIn</string>
+    <string name="sign_up">SignUp</string>
+    <string name="skip">Skip</string>
+    <string name="forgot">Forgot</string>
+    <string name="no_acc">Not registered yet?</string>
+    <string name="email_err">Invalid Email</string>
+    <string name="pass_err">Password Should be Minimum 6 Characters"</string>
+    <string name="cpass_err">Confirm Password Should be Minimum 6 Characters"</string>
+    <string name="fullname_err">Please enter your FullName</string>
+    <string name="mobile_err">Invalid Mobile No.</string>
+    <string name="compare_pass_err">Confirm Password Should be same as Password"</string>
+
+
+    <!-- SignIn Screen    -->
+    <string name="signin_name">Full Name</string>
+    <string name="signin_email">Email ID</string>
+    <string name="signin_mobile">Mobile no.</string>
+    <string name="signin_confirm_pass">Confirm Password</string>
+
+
+    <!-- Forgot Screen    -->
+    <string name="submit">Submit</string>
+
+
+    <!-- Dash Screen    -->
+    <string name="dashboard">Dashboard</string>
+
+    <string name="dash_buy">Buy a Car</string>
+    <string name="dash_sell">Sell a Car</string>
+    <string name="dash_contact">Insurance</string>
+    <string name="dash_about">About Us</string>
+    <string name="dash_vehicle">Vehicle</string>
+    <string name="dash_mobile">Mobile</string>
+    <string name="dash_plates">Vehicle Plates</string>
+    <string name="dash_prd_type">Product Type</string>
+
+    <!-- Product Screen    -->
+    <string name="prd_name">Name</string>
+    <string name="prd_color">Color</string>
+    <string name="prd_kilometer">Kilometers</string>
+    <string name="prd_price">Price</string>
+    <string name="prd_title">Product List</string>
+    <string name="prd_details_title">Product Details</string>
+
+
+    <!-- Product Details Screen    -->
+    <string name="prd_d_name">Name&#x20;&#x20;:</string>
+    <string name="prd_d_color">Color&#x20;&#x20;&#x20;:</string>
+    <string name="prd_d_kilometer">Km&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;:</string>
+    <string name="prd_d_door">Doors&#x20;&#x20;:</string>
+    <string name="prd_d_price">Price&#x20;&#x20;&#x20;&#x20;:</string>
+    <string name="prd_d_desc">Description&#x20;&#x20;:</string>
+    <string name="prd_d_country">Country&#x20;&#x20;:</string>
+
+
+    <!-- About Us Contact Us Screen    -->
+    <string name="about_us_content">
+        \u0020Emirates car was Established in United Arab  \n\n
+              Emirates by Saif Al Hammadi to make easy  \n\n
+              business of cars whose provide the wide platform \n\n
+              to buy and  sale all kind of cars in Emirates of UAE.\n
+    </string>
+    <string name="contact_no">Contact No.&#x20;:</string>
+    <string name="address">Address&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;&#x20;:</string>
+    <string name="website">Web URL &#x20;&#x20;&#x20;&#x20;&#x20;:</string>
+
+    <!--<string name="p_contact_no">For more details and lower price call upon below no.\n 0507777161 or 0555555634</string>-->
+    <string name="p_address">United Arab Emirates</string>
+    <string name="p_website">http://emiratescar.ae</string>
+
+    <string name="p_contact_no">For more details and lower price call upon below no.\n 0507777161 or 0555555634</string>
+
+
+
+
+
+
+
+
+
+</resources>
